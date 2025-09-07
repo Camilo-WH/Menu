@@ -53,23 +53,10 @@ public class Main {
         if (sumaD1 == sumaD2) {
             System.out.println("Empate");
         }
-        if (sumaD1 > sumaD2) {
-            if (sumaD1 > sumaD2) {
-                System.out.println("Dado 1 Gana");
-            } else {
-                System.out.println("Dado 1 Segunda posicion");
-            }
-        } else {
-            System.out.println("Dado 1 tercera posicion");
-        }
-        if (sumaD2 > sumaD1) {
-            if (sumaD2 > sumaD1) {
-                System.out.println("Dado 2 Gana");
-            } else {
-                System.out.println("Dado 2 Segunda posicion");
-            }
-        } else {
-            System.out.println("Dado 2 tercera posicion");
+        else if (sumaD1 > sumaD2) {
+            System.out.println("Dado 1 gana");
+        }else{
+            System.out.println("Dado 2 gana");
         }
 
 
@@ -169,6 +156,3 @@ public class Main {
 
 
 }
-
-
-
