@@ -1,3 +1,6 @@
+
+//Yeferson Camilo Blanco Carrion
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,7 +10,12 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         int a;
         boolean b = true;
-        System.out.println("Elija su opcion: 1: Dados(2) 2: Dados(3) 3: Estado nutricional 4: Tabla de Multiplicar 5:Salir ");
+        System.out.println("1. Dados");
+        System.out.println("2. Dados 2");
+        System.out.println("3. Estado nutricional");
+        System.out.println("4. Tabla de multiplicar");
+        System.out.println("5. Carrera");
+        System.out.println("6. Salir");
         a = teclado.nextInt();
         switch (a) {
             case 1:
@@ -23,6 +31,10 @@ public class Main {
                 tablaMultiplicar();
                 break;
             case 5:
+                carrera();
+
+                break;
+            case 6:
                 b = false;
                 break;
             default:
@@ -149,6 +161,44 @@ public class Main {
         System.out.println("Tabla del "+ numero + ":");
         for(int i=1; i<=10;i++){
             System.out.println(numero + " x " + i + " = " + (numero * i));
+
+        }
+
+    }
+
+    public static void carrera () {
+        int corredor1=0,corredor2=0,a,b;
+        Random aleatorio = new Random();
+        for(int x=1;x<=15;x++){
+
+            a=aleatorio.nextInt((6-1)+1)+1;
+            b=aleatorio.nextInt((6-1)+1)+1;
+            corredor1+=a;
+            corredor2+=b;
+            System.out.println("Los pasos del corredor 1 han sido: "+ corredor1);
+            System.out.println("Los pasos del corredor 2 han sido: "+ corredor2);
+            if(a==6){
+                a-=8;
+
+            }else if(b==6){
+                b-=8;
+
+            }else if(a>=50 || b>=50){
+                if(a>b){
+                    System.out.println("El corredor 1 gana");
+
+                }else if(b>a){
+                    System.out.println("El corredor 2 gana");
+                }else if (a==b){
+                    System.out.println("Empate");
+                }
+
+            }
+
+
+
+
+
 
         }
 
